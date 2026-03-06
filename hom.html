@@ -55,10 +55,14 @@
       <!-- btn section -->
       <section>
         <div
-          class="container mx-auto mt-10 bg-base-300 shadow-sm rounded-md p-4 flex gap-4"
+          class="container mx-auto mt-10 bg-base-300 border border-gray-300 shadow-sm rounded-md p-4 flex gap-4"
         >
           <div class="flex flex-col md:flex-row w-full gap-4">
-            <button class="btn btn-primary px-10" onclick="setActive(this)">
+            <button
+              id="openBtn"
+              class="btn btn-primary px-10"
+              onclick="setActive(this)"
+            >
               All
             </button>
             <button
@@ -110,9 +114,45 @@
         </div>
         <hr class="text-gray-500" />
       </section>
+
+      <section
+        class="container mx-auto card card-body bg-base-300 shadow-sm grid grid-cols-4"
+      >
+        <!-- load data card -->
+        <div class="card shadow-2xl border-t-4 border-success">
+          <div class="card card-body space-y-5">
+            <!-- img and btn -->
+            <div class="flex items-center justify-between">
+              <img src="../assets/Open-Status.png" alt="" class="w-12" />
+              <button class="btn btn-warning rounded-full text-xl px-10">
+                High
+              </button>
+            </div>
+            <!-- card title -->
+            <h2 class="font-semibold text-2xl">
+              Fix navigation menu on mobile devices
+            </h2>
+            <p class="text-gray-500 text-xl">
+              The navigation menu doesn't collapse properly on mobile devices...
+            </p>
+
+            <!-- button badge -->
+            <div class="flex justify-between">
+              <button class="btn btn-error rounded-full px-10">Bug</button>
+              <button class="btn btn-warning rounded-full">help wanted</button>
+            </div>
+          </div>
+          <hr class="text-gray-400" />
+          <div class="text-gray-500 card card-body">
+            <p>#1 by john_doe</p>
+            <p>1/15/2024</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- script link -->
     <script src="../script/btnactive.js"></script>
+    <script src="../script/allcard.js"></script>
   </body>
 </html>

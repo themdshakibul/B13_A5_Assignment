@@ -13,7 +13,7 @@ document.getElementById("sing-btn").addEventListener("click", function () {
   if (userName == "admin" && userPassword == "admin123") {
     // 3.1 true --> alert--> homepage
     alert("loging successfull");
-    window.location.assign("../html/hom.html");
+    window.location.assign("/B13_A5_Assignment/hom.html");
   } else {
     // 3.2 false --> alert --> return
     alert("login Failed");
