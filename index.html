@@ -22,8 +22,63 @@
     <title>Assignment 05</title>
   </head>
   <body class="font-Geist">
-    <main>
-      
+    <main
+      class="w-130 h-80vh mx-auto bg-base-200 shadow-xl my-10 card card-body py-10"
+    >
+      <!-- logo and text -->
+      <div class="flex flex-col items-center justify-center">
+        <img src="./assets/github-logo.png" alt="" />
+        <div class="py-5 text-center">
+          <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+          <p class="text-gray-500 text-[16px]">Sign in to manage your issues</p>
+        </div>
+      </div>
+
+      <!-- loging -->
+      <div class="card w-full mx-auto max-w-md shrink-0">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-[18px] font-medium text-black"
+              >Username</label
+            >
+            <input
+              id="user-name"
+              type="email"
+              class="input text-[16px] w-full"
+              placeholder="Enter Username"
+            />
+            <p class="text-primary text-[14px]">Default: admin</p>
+            <label class="label text-[18px] font-medium text-black"
+              >Password</label
+            >
+            <input
+              id="password"
+              type="password"
+              class="input text-[16px] w-full"
+              placeholder="Enter Password"
+            />
+            <p class="text-primary text-[14px]">Default: admin123</p>
+            <button id="sing-btn" class="btn btn-primary mt-4">Sign In</button>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- or -->
+      <div class="space-y-5 text-center">
+        <fieldset class="border-t border-gray-400 text-center px-4 rounded">
+          <legend class="px-2 font-bold">OR</legend>
+        </fieldset>
+
+        <h3>Demo Credentials:</h3>
+        <div>
+          <p class="text-[16px]">
+            <span class="font-semibold">Username:</span> admin
+          </p>
+          <p class="text-[16px]">
+            <span class="font-semibold">Password:</span> admin123
+          </p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
