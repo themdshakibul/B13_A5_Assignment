@@ -175,7 +175,6 @@ const displsyModal = (items) => {
 document.getElementById("btnSearch").addEventListener("click", () => {
   const inputSearch = document.getElementById("inputSearch");
   const searchValue = inputSearch.value.trim().toLowerCase();
-  console.log(searchValue);
 
   fetch(
     `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`,
@@ -183,7 +182,6 @@ document.getElementById("btnSearch").addEventListener("click", () => {
     .then((res) => res.json())
     .then((data) => {
       const allCards = data.data;
-      console.log(allCards);
       const filterCards = allCards.filter((card) =>
         card.title.toLowerCase().includes(searchValue),
       );
