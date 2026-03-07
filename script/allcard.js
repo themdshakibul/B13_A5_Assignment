@@ -75,7 +75,7 @@ function displayLoadCard(issues) {
             <!-- img and btn -->
             <div class="flex items-center justify-between gap-4">
               <img 
-                  src="${issue.status === "open" ? "./Open-Status.png" : "./Closed-Status.png"}" 
+                  src="${issue.status === "open" ? "./assets/Open-Status.png" : "./assets/Closed-Status.png"}" 
                   alt="${issue.status}" 
                   class="w-12"
                 />
