@@ -128,7 +128,6 @@ const displsyModal = (items) => {
         ? "bg-[#FFF6D1] text-[#F59E0B]"
         : "bg-[#EEEFF2] text-[#9CA3AF]";
 
-  console.log(items);
   const card = document.getElementById("detailsCards");
   card.innerHTML = `
     <div class="space-y-5">
@@ -171,5 +170,25 @@ const displsyModal = (items) => {
   `;
   document.getElementById("cardModal").showModal();
 };
+
+// search
+document.getElementById("btnSearch").addEventListener("click", () => {
+  const inputSearch = document.getElementById("inputSearch");
+  const searchValue = inputSearch.value.trim().toLowerCase();
+  console.log(searchValue);
+
+  fetch(
+    `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`,
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      const allCards = data.data;
+      console.log(allCards);
+      const filterCards = allCards.filter((card) =>
+        card.title.toLowerCase().includes(searchValue),
+      );
+      displayLoadCard(filterCards);
+    });
+});
 
 loadCard();

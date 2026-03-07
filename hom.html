@@ -39,14 +39,26 @@
           </div>
         </div>
         <div class="flex gap-5">
-          <input
-            type="text"
-            placeholder="Search issues..."
-            class="input input-bordered w-24 md:w-auto"
-          />
-          <button class="btn btn-primary">
-            <i class="ri-add-large-line"></i> New Issue
-          </button>
+          <label class="input">
+            <svg
+              class="h-[1em]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input id="inputSearch" type="text" required placeholder="Search issues..." />
+          </label>
+          <button id="btnSearch" class="btn btn-primary">Search</button>
         </div>
       </div>
     </nav>

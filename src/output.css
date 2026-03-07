@@ -2160,6 +2160,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-\[1em\] {
+    height: 1em;
+  }
   .min-h-1 {
     min-height: calc(var(--spacing) * 1);
   }
@@ -2526,6 +2529,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
