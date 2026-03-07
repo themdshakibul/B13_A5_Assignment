@@ -130,11 +130,25 @@
           <!-- loading spiner -->
           <span class="loading loading-dots loading-lg"></span>
         </div>
+
+        <!-- catagory modal  -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="cardModal" class="modal modal-bottom sm:modal-middle p-10">
+          <div class="modal-box">
+            <div id="detailsCards"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn bg-primary text-white">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
     </main>
 
     <!-- script link -->
-    <script src="../script/btnactive.js"></script>
-    <script src="../script/allcard.js"></script>
+    <script src="./script/btnactive.js"></script>
+    <script src="./script/allcard.js"></script>
   </body>
 </html>
