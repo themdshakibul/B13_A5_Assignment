@@ -59,19 +59,21 @@
         >
           <div class="flex flex-col md:flex-row w-full gap-4">
             <button
-              id="openBtn"
+              id="allBtn"
               class="btn btn-primary px-10"
               onclick="setActive(this)"
             >
               All
             </button>
             <button
+              id="openBtn"
               class="btn btn-outline btn-primary px-10"
               onclick="setActive(this)"
             >
               Open
             </button>
             <button
+              id="closedBtn"
               class="btn btn-outline btn-primary px-10"
               onclick="setActive(this)"
             >
@@ -94,7 +96,9 @@
               class="w-20 bg-gray-300 rounded-full p-3"
             />
             <div>
-              <h2 class="text-2xl font-bold">50 Issues</h2>
+              <h2 class="text-2xl font-bold">
+                <span id="issuesItems">00</span>: Issues
+              </h2>
               <p class="text-gray-500">Track and manage your project issues</p>
             </div>
           </div>
@@ -115,38 +119,16 @@
         <hr class="text-gray-500" />
       </section>
 
-      <section
-        class="container mx-auto card card-body bg-base-300 shadow-sm grid grid-cols-4"
-      >
-        <!-- load data card -->
-        <div class="card shadow-2xl border-t-4 border-success">
-          <div class="card card-body space-y-5">
-            <!-- img and btn -->
-            <div class="flex items-center justify-between">
-              <img src="./assets/Open-Status.png" alt="" class="w-12" />
-              <button class="btn btn-warning rounded-full text-xl px-10">
-                High
-              </button>
-            </div>
-            <!-- card title -->
-            <h2 class="font-semibold text-2xl">
-              Fix navigation menu on mobile devices
-            </h2>
-            <p class="text-gray-500 text-xl">
-              The navigation menu doesn't collapse properly on mobile devices...
-            </p>
-
-            <!-- button badge -->
-            <div class="flex justify-between">
-              <button class="btn btn-error rounded-full px-10">Bug</button>
-              <button class="btn btn-warning rounded-full">help wanted</button>
-            </div>
-          </div>
-          <hr class="text-gray-400" />
-          <div class="text-gray-500 card card-body">
-            <p>#1 by john_doe</p>
-            <p>1/15/2024</p>
-          </div>
+      <section class="container mx-auto card card-body bg-base-200 shadow-sm">
+        <div
+          id="cardContainer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+        >
+          <!-- dynamic added -->
+        </div>
+        <div id="loadingSpiner" class="text-center hidden justify-center py-60">
+          <!-- loading spiner -->
+          <span class="loading loading-dots loading-lg"></span>
         </div>
       </section>
     </main>
