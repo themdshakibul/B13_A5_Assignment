@@ -95,10 +95,10 @@ function displayLoadCard(issues) {
             <div class="flex w-fit gap-3">
               <button class="btn text-[10px] px-5 border uppercase rounded-full flex items-center
                 ${issue.labels[0] === "bug" ? "bg-red-200 text-red-600 border-red-500" : "bg-green-200 text-green-600 border-green-500"}">
-                <img src="${issue.labels[0] === "bug" ? "../assets/bug.png" : "../assets/Vector.png"}">
+                <img src="${issue.labels[0] === "bug" ? "./assets/bug.png" : "./assets/Vector.png"}">
                 ${issue.labels[0] || "No Bug"}
               </button>
-              <button class="btn text-[10px] px-3 bg-[#FFF8DB] text-[#F59E0B] border border-[#F59E0B] uppercase rounded-full "><img src="../assets/help.png" alt=""> ${issue.labels[1] || "Help Wanted"}</button>
+              <button class="btn text-[10px] px-3 bg-[#FFF8DB] text-[#F59E0B] border border-[#F59E0B] uppercase rounded-full "><img src="./assets/help.png" alt=""> ${issue.labels[1] || "Help Wanted"}</button>
             </div>
           </div>
           <hr class="text-gray-400" />
@@ -138,7 +138,7 @@ const displsyModal = (items) => {
         } text-white">
           ${items.status === "open" ? "Open" : "Closed"}
         </button>
-        <div class="flex items-center gap-3 text-xl font-medium">
+        <div class="flex items-center gap-3 text-[16px] font-medium">
           <p>${items.author}</p>
           <p>${new Date(items.updatedAt).toLocaleDateString()}</p>
         </div>
@@ -146,10 +146,10 @@ const displsyModal = (items) => {
       <div class="flex gap-3 items-center">
         <button class="btn text-[10px] px-5 border uppercase rounded-full flex items-center
           ${items.labels[0] === "bug" ? "bg-red-200 text-red-600 border-red-500" : "bg-green-200 text-green-600 border-green-500"}">
-          <img src="${items.labels[0] === "bug" ? "../assets/bug.png" : "../assets/Vector.png"}">
+          <img src="${items.labels[0] === "bug" ? "./assets/bug.png" : "./assets/Vector.png"}">
           ${items.labels[0] || "No Bug"}
               </button>
-          <button class="btn text-[10px] px-5 bg-[#FFF8DB] text-[#F59E0B] border border-[#F59E0B] uppercase rounded-full "><img src="../assets/help.png" alt=""> ${items.labels[1] || "Help Wanted"}</button>
+          <button class="btn text-[10px] px-5 bg-[#FFF8DB] text-[#F59E0B] border border-[#F59E0B] uppercase rounded-full "><img src="./assets/help.png" alt=""> ${items.labels[1] || "Help Wanted"}</button>
       </div>
       <p class="text-xl">
         ${items.description}
