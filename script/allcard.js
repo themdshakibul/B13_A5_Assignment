@@ -13,12 +13,16 @@ let allIssues = [];
 const catagoryModal = document.getElementById("catagoryModal");
 
 function filterIssues(status) {
-  if (status === "all") {
-    displayLoadCard(allIssues);
-  } else {
-    const filtered = allIssues.filter((issue) => issue.status === status);
-    displayLoadCard(filtered);
-  }
+  showLoading();
+
+  setTimeout(() => {
+    if (status === "all") {
+      displayLoadCard(allIssues);
+    } else {
+      const filtered = allIssues.filter((issue) => issue.status === status);
+      displayLoadCard(filtered);
+    }
+  }, 200);
 }
 
 allBtn.addEventListener("click", () => filterIssues("all"));
