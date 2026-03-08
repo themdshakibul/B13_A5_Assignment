@@ -22,6 +22,7 @@ function filterIssues(status) {
       const filtered = allIssues.filter((issue) => issue.status === status);
       displayLoadCard(filtered);
     }
+    hiddenLoading();
   }, 200);
 }
 
